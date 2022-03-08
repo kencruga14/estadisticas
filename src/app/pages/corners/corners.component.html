@@ -1,31 +1,58 @@
-  <!-- <div class="container-fluid">
-    <div class="grid p-fluid">
-      <div class="col-12">
-        <p-fieldset>
-          <p-header>Calculadora de Goles</p-header>
-          
-          <div class="grid p-fluid">
-            <div class="p-field p-col-12 p-md-3 col-offset-1">
-              <label for="integeronly">Promedio Corners por partido</label>
-              <p-inputNumber inputId="integeronly" [(ngModel)]="value1" [minFractionDigits]="2" [maxFractionDigits]="2">
-              </p-inputNumber>
-            </div>
+<p-card>
+  <div class="container">
+    <p-header>
+      Header content here
+    </p-header><br>
+    <div class="grid p-fluid" style="margin-top: 15px;">
+      <div class="col-6">
+        <div class="grid p-fluid">
+          <div class="p-col-12 p-md-3 col-offset-1">
+            <label for="pcpl">Promedio Corners por partido</label>
+            <p-inputNumber inputId="pcpl" [(ngModel)]="DI.pcpl" [minFractionDigits]="2" [maxFractionDigits]="2">
+            </p-inputNumber>
           </div>
-        </p-fieldset>
+          <div class="p-col-12 p-md-3 col-offset-1">
+            <label for="pcfl">Promedio Corners a Favor</label>
+            <p-inputNumber inputId="pcfl" [(ngModel)]="DI.pcfl" [minFractionDigits]="2" [maxFractionDigits]="2">
+            </p-inputNumber>
+          </div>
+          <div class="p-col-12 p-md-3 col-offset-1">
+            <label for="pcel">Promedio Corners en Contra</label>
+            <p-inputNumber inputId="pcel" [(ngModel)]="DI.pcel" [minFractionDigits]="2" [maxFractionDigits]="2">
+            </p-inputNumber>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 ">
+        <div class="grid p-fluid">
+          <div class="p-col-12 p-md-3 col-offset-1">
+            <label for="pcpv">Promedio Corners por partido</label>
+            <p-inputNumber inputId="pcpv" [(ngModel)]="DI.pcpv" [minFractionDigits]="2" [maxFractionDigits]="2">
+            </p-inputNumber>
+          </div>
+          <div class="p-col-12 p-md-3 col-offset-1">
+            <label for="pcfv">Promedio Corners a Favor</label>
+            <p-inputNumber inputId="pcfv" [(ngModel)]="DI.pcfv" [minFractionDigits]="2" [maxFractionDigits]="2">
+            </p-inputNumber>
+          </div>
+        </div>
+        <div class="p-col-12 p-md-3 col-offset-1">
+          <label for="pcev">Promedio Corners en Contra</label>
+          <p-inputNumber inputId="pcev" [(ngModel)]="DI.pcev" [minFractionDigits]="2" [maxFractionDigits]="2">
+          </p-inputNumber>
+        </div>
+      </div>
+      <div class="col-3 col-offset-4" style="margin-bottom: 10px;">
+        <button pButton pRipple type="button" label="Calcular" (click)="calcularCorners(DI)"
+          class="p-button-rounded p-button-success"></button>
+          <br>
       </div>
     </div>
-
-  </div> -->
-
-<div class="grid">
-  <div class="col-6" style="background-color: black;">
-      <div class="grid">
-          <div class="col-12" style="background-color: gray;">
-              12
-          </div>
-      </div>
+    <p-footer>
+      <p-fieldset *ngIf="promedioCorners" legend="Recomendación Línea">
+        <p style="text-align: center; color: black;"> {{promedioCorners}}</p>
+      </p-fieldset>
+      Footer content here
+    </p-footer>
   </div>
-  <div class="col-6" style="background-color: red;">
-      4
-  </div>
-</div>
+</p-card>

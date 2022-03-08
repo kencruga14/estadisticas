@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AdminLayoutRoutes } from './admin-layout.routing';
 import { DashboardComponent }       from '../../pages/dashboard/dashboard.component';
 import { CornersComponent} from "../../pages/corners/corners.component";
@@ -14,6 +14,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {CardModule} from 'primeng/card';
 import {FieldsetModule} from 'primeng/fieldset';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   imports: [
@@ -26,6 +27,8 @@ import {FieldsetModule} from 'primeng/fieldset';
     InputNumberModule,
     CardModule,
     FieldsetModule,
+    ReactiveFormsModule,
+    ButtonModule,
   ],
   declarations: [
     DashboardComponent,
