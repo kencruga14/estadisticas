@@ -4,34 +4,34 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
-
 import { DashboardComponent }       from '../../pages/dashboard/dashboard.component';
-import { UserComponent }            from '../../pages/user/user.component';
-import { TableComponent }           from '../../pages/table/table.component';
-import { TypographyComponent }      from '../../pages/typography/typography.component';
-import { IconsComponent }           from '../../pages/icons/icons.component';
-import { MapsComponent }            from '../../pages/maps/maps.component';
-import { NotificationsComponent }   from '../../pages/notifications/notifications.component';
-import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component';
-
+import { CornersComponent} from "../../pages/corners/corners.component";
+import { TarjetasComponent} from "../../pages/tarjetas/tarjetas.component";
+import { GolesComponent} from "../../pages/goles/goles.component";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import {InputTextModule} from 'primeng/inputtext';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {CardModule} from 'primeng/card';
+import {FieldsetModule} from 'primeng/fieldset';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
-    NgbModule
+    NgbModule,
+    AccordionModule,
+    InputTextModule,
+    InputNumberModule,
+    CardModule,
+    FieldsetModule,
   ],
   declarations: [
     DashboardComponent,
-    UserComponent,
-    TableComponent,
-    UpgradeComponent,
-    TypographyComponent,
-    IconsComponent,
-    MapsComponent,
-    NotificationsComponent,
+    CornersComponent,
+    TarjetasComponent,
+    GolesComponent,
   ]
 })
 
