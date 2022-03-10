@@ -1,0 +1,16 @@
+.example-card {
+    max-width: 100%;
+  }
+
+  .mat-grid-tile {
+    background: lightblue;
+    border: 2px;
+    border-style: grooves;
+  }
+  
+  :host {
+    ::ng-deep.p-fieldset .p-fieldset-content {
+      padding-top: 0px;
+      margin-top: 0px;
+}
+}

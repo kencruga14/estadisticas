@@ -9,10 +9,10 @@ export interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard', icon: 'nc-bank', class: '' },
-    { path: '/corners', title: 'Corners', icon: 'nc-diamond', class: '' },
-    { path: '/tarjetas', title: 'Tarjetas', icon: 'nc-pin-3', class: '' },
-    { path: '/goles', title: 'Goles', icon: 'nc-bell-55', class: '' },
+    { path: '/dashboard', title: 'Dashboard', icon: 'fa-solid fa-house', class: '' },
+    { path: '/corners', title: 'Corners', icon: 'fa-solid fa-flag', class: '' },
+    { path: '/tarjetas', title: 'Tarjetas', icon: 'fa-solid fa-tablet', class: '' },
+    { path: '/goles', title: 'Goles', icon: 'fa-solid fa-futbol', class: '' },
 
 ];
 

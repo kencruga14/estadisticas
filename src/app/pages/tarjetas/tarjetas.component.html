@@ -1,1 +1,83 @@
-<p>tarjetas works!</p>
+<p-card>
+  <div class="container">
+    <p-fieldset>
+      <p-header style="text-align: center;">Calculadora de Tarjetas</p-header>
+      <div class="grid p-fluid" style="margin-top: 15px;">
+        <!-- Cuadro Local -->
+        <div class="col-6">
+          <div class="grid p-fluid p-formgrid">
+            <div class="p-col-12 p-md-3 col-offset-3" style="margin-top: 0px; padding-top: 0px;">
+              <span class="p-tag p-tag-success" style="font-size: 15px;">Número de Tarjetas Equipo Local</span>
+            </div>
+            <div class="p-field p-col-12 p-md-3 col-offset-1">
+              <label for="tfl">A Favor Local</label>
+              <p-inputNumber inputId="tfl" [(ngModel)]="DI.tfl" [minFractionDigits]="2" [maxFractionDigits]="2">
+              </p-inputNumber>
+            </div>
+            <div class=" p-field p-col-12 p-md-3 col-offset-1">
+              <label for="tel">En Contra Local</label>
+              <p-inputNumber inputId="tel" [(ngModel)]="DI.tel" [minFractionDigits]="2" [maxFractionDigits]="2">
+              </p-inputNumber>
+            </div>
+          </div>
+        </div>
+        <!-- Cuadro Visita -->
+        <div class="col-6 ">
+          <div class="grid p-fluid p-formgrid">
+            <div class="p-col-12 p-md-3 col-offset-3" style="margin-top: 0px; padding-top: 0px;">
+              <span class="p-tag p-tag-success" style="font-size: 15px;">Número de Tarjetas Equipo Visitante</span>
+            </div>
+            <div class="p-field p-col-12 p-md-3 col-offset-1">
+              <label for="tfv">A Favor Visita</label>
+              <p-inputNumber inputId="tfv" [(ngModel)]="DI.tfv" [minFractionDigits]="2" [maxFractionDigits]="2">
+              </p-inputNumber>
+            </div>
+            <div class="p-field p-col-12 p-md-3 col-offset-1">
+              <label for="tev">En Contra Visita</label>
+              <p-inputNumber inputId="tev" [(ngModel)]="DI.tev" [minFractionDigits]="2" [maxFractionDigits]="2">
+              </p-inputNumber>
+            </div>
+          </div>
+        </div>
+<!-- Cuadro Arbitro -->
+        <div class="col-12">
+          <div class="grid p-fluid">
+            <div class="p-col-12 p-md-3 col-offset-4" style="margin-top: 0px; padding-top: 0px;">
+              <span class="p-tag p-tag-success" style="font-size: 15px;">Promedio Tarjetas Árbitro</span>
+            </div>
+            <div class="col-6">
+              <div class="grid p-fluid p-formgrid">
+                <div class="p-field p-col-12 p-md-3 col-offset-1">
+                  <label for="paa">Promedio Amarillas</label>
+                  <p-inputNumber inputId="paa" [(ngModel)]="DI.paa" [minFractionDigits]="2" [maxFractionDigits]="2">
+                  </p-inputNumber>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 ">
+              <div class="grid p-fluid p-formgrids">
+                <div class=" p-field p-col-12 p-md-3 col-offset-1">
+                  <label for="pra">Promedio Rojas</label>
+                  <p-inputNumber inputId="pra" [(ngModel)]="DI.pra" [minFractionDigits]="2" [maxFractionDigits]="2">
+                  </p-inputNumber>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- Boton Calcular -->
+        <div class="col-3 col-offset-4" style="margin-bottom: 10px;">
+          <button pButton pRipple type="button" label="Calcular" (click)="calcularTarjetas(DI)"
+            class="p-button-rounded"></button>
+          <br>
+        </div>
+      </div>
+      <p-footer>
+        <div class="col-12 col-offset-3" *ngIf="promedioTarjetas" style="font-size: 25px;">
+          <span>Recomendación Línea: </span>
+          <span class="p-tag  p-tag-warning p-tag-xl" style="font-size: 25px;"> {{promedioTarjetas | number : '1.2-2'}}  Tarjetas</span>
+        </div>
+      </p-footer>
+    </p-fieldset>
+  </div>
+</p-card>
