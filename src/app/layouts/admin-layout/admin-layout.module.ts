@@ -16,6 +16,7 @@ import {CardModule} from 'primeng/card';
 import {FieldsetModule} from 'primeng/fieldset';
 import {ButtonModule} from 'primeng/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   imports: [
@@ -31,6 +32,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ReactiveFormsModule,
     ButtonModule,
     FontAwesomeModule,
+    TableModule,
   ],
   declarations: [
     DashboardComponent,

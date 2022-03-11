@@ -1,1 +1,83 @@
-<p>goles works!</p>
+<p-card>
+    <div class="container">
+      <p-fieldset>
+        <p-header style="text-align: center;">Calculadora de Over/Under Goles</p-header>
+        <div class="grid p-fluid" style="margin-top: 15px;">
+          <!-- Cuadro Local -->
+          <div class="col-6">
+            <div class="grid p-fluid p-formgrid">
+              <div class="p-col-12 p-md-3 col-offset-3" style="margin-top: 0px; padding-top: 0px;">
+                <span class="p-tag p-tag-success" style="font-size: 15px;">Equipo Local</span>
+              </div>
+              <div class="p-field p-col-12 p-md-3 col-offset-1">
+                <label for="pal">Promedio Anotado Local</label>
+                <p-inputNumber inputId="pal" [(ngModel)]="DI.pal" [minFractionDigits]="2" [maxFractionDigits]="2">
+                </p-inputNumber>
+              </div>
+              <div class=" p-field p-col-12 p-md-3 col-offset-1">
+                <label for="prl">Promedio Recibido Local</label>
+                <p-inputNumber inputId="prl" [(ngModel)]="DI.prl" [minFractionDigits]="2" [maxFractionDigits]="2">
+                </p-inputNumber>
+              </div>
+            </div>
+          </div>
+          <!-- Cuadro Visita -->
+          <div class="col-6 ">
+            <div class="grid p-fluid p-formgrid">
+              <div class="p-col-12 p-md-3 col-offset-3" style="margin-top: 0px; padding-top: 0px;">
+                <span class="p-tag p-tag-success" style="font-size: 15px;">Equipo Visitante</span>
+              </div>
+              <div class="p-field p-col-12 p-md-3 col-offset-1">
+                <label for="pav">Promedio Anotado Visita</label>
+                <p-inputNumber inputId="pav" [(ngModel)]="DI.pav" [minFractionDigits]="2" [maxFractionDigits]="2">
+                </p-inputNumber>
+              </div>
+              <div class="p-field p-col-12 p-md-3 col-offset-1">
+                <label for="prv">Promedio Recibido Visita</label>
+                <p-inputNumber inputId="prv" [(ngModel)]="DI.prv" [minFractionDigits]="2" [maxFractionDigits]="2">
+                </p-inputNumber>
+              </div>
+            </div>
+          </div>
+  <!-- Cuadro Arbitro -->
+          <div class="col-12">
+            <div class="grid p-fluid">
+              <div class="p-col-12 p-md-3 col-offset-4" style="margin-top: 0px; padding-top: 0px;">
+                <span class="p-tag p-tag-success" style="font-size: 15px;">Promedio Goles Liga</span>
+              </div>
+              <div class="col-6">
+                <div class="grid p-fluid p-formgrid">
+                  <div class="p-field p-col-12 p-md-3 col-offset-1">
+                    <label for="pels">Equipos Locales</label>
+                    <p-inputNumber inputId="pels" [(ngModel)]="DI.pels" [minFractionDigits]="2" [maxFractionDigits]="2">
+                    </p-inputNumber>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 ">
+                <div class="grid p-fluid p-formgrids">
+                  <div class=" p-field p-col-12 p-md-3 col-offset-1">
+                    <label for="pevs">Equipos Visitantes</label>
+                    <p-inputNumber inputId="pevs" [(ngModel)]="DI.pevs" [minFractionDigits]="2" [maxFractionDigits]="2">
+                    </p-inputNumber>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  <!-- Boton Calcular -->
+          <div class="col-3 col-offset-4" style="margin-bottom: 10px;">
+            <button pButton pRipple type="button" label="Calcular" (click)="calcularOver(DI)"
+              class="p-button-rounded"></button>
+            <br>
+          </div>
+        </div>
+        <p-footer>
+          <div class="col-12 col-offset-3" *ngIf="promedioOver" style="font-size: 25px;">
+            <span>Recomendación Línea: </span>
+            <span class="p-tag  p-tag-warning p-tag-xl" style="font-size: 25px;"> {{promedioOver}}</span>
+          </div>
+        </p-footer>
+      </p-fieldset>
+    </div>
+  </p-card>
